@@ -59,12 +59,12 @@ public class AccountServiceImpl implements AccountService {
         }
 
         // 检查注册合法性
-        if (username == null || username.length() < 4 || username.length() > 20 || !username.matches("\\w+")) {
-            throw new InvalidInformationException("Username must be between 4 and 20 characters and contain only alphanumeric characters and underscores");
-        }
-        if (password == null || password.length() < 8) {
-            throw new InvalidInformationException("Password must be at least 8 characters");
-        }
+//        if (username == null || username.length() < 4 || username.length() > 20 || !username.matches("\\w+")) {
+//            throw new InvalidInformationException("Username must be between 4 and 20 characters and contain only alphanumeric characters and underscores");
+//        }
+//        if (password == null || password.length() < 8) {
+//            throw new InvalidInformationException("Password must be at least 8 characters");
+//        }
         if (email == null || !email.matches("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$")) {
             throw new InvalidInformationException("Must be a valid email address");
         }
@@ -89,9 +89,9 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void editUserInfoById(Integer id, UserInfoDto userInfoDto) throws InvalidCredentialsException, InvalidInformationException {
-        if (userInfoDto.getUsername() == null || userInfoDto.getUsername().length() < 4 || userInfoDto.getUsername().length() > 20 || !userInfoDto.getUsername().matches("\\w+")) {
-            throw new InvalidInformationException("Username must be between 4 and 20 characters and contain only alphanumeric characters and underscores");
-        }
+//        if (userInfoDto.getUsername() == null || userInfoDto.getUsername().length() < 4 || userInfoDto.getUsername().length() > 20 || !userInfoDto.getUsername().matches("\\w+")) {
+//            throw new InvalidInformationException("Username must be between 4 and 20 characters and contain only alphanumeric characters and underscores");
+//        }
         if (userInfoDto.getEmail() == null || !userInfoDto.getEmail().matches("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$")) {
             throw new InvalidInformationException("Must be a valid email address");
         }

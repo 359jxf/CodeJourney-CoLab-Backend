@@ -13,9 +13,11 @@ import java.util.regex.*;
 @Service
 public class PythonExecutionService {
 
-    String pyPath = "C:\\Users\\vapacity\\AppData\\Local\\Programs\\Python\\Python311\\python.exe";  // Python解释器路径
+    // python程序的绝对路径，在windows中用"\\"分隔，在Linux中用"/"分隔
+    String pyPath = "D:\\APP\\PYTHON\\python.exe";  // Python解释器路径
 
-    String codeFilePath = "E:\\temp_code.py";
+    // 临时文件路径，用来存储代码
+    String codeFilePath = "D:\\cjcl.py";
 
     public SubmissionDetail executePythonCode(String code, List<TestCase> testCases) {
         String updatedCode = "import sys\n" + code;
